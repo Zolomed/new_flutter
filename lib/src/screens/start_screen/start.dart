@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
+import 'export.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -31,11 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _screens = <Widget>[
-    Screen1(),
-    Screen2(),
-    Screen3(),
-    Screen4(),
-    Screen5(),
+    Home(),
+    Search(),
+    Basket(),
+    Account(),
+    Settings(),
   ];
 
   void _onItemTapped(int index) {
@@ -78,76 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
         unselectedItemColor: Colors.blueGrey,
         selectedItemColor: Colors.black,
         onTap: _onItemTapped,
-      ),
-    );
-  }
-}
-
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Главная',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class Screen2 extends StatelessWidget {
-  const Screen2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Поиск',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class Screen3 extends StatelessWidget {
-  const Screen3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Корзина',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class Screen4 extends StatelessWidget {
-  const Screen4({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Аккаунт',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}
-
-class Screen5 extends StatelessWidget {
-  const Screen5({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Настройки',
-        style: TextStyle(fontSize: 24),
       ),
     );
   }

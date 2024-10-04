@@ -1,1 +1,1 @@
-export 'package:new_flutter/src/main.dart';
+export 'package:new_flutter/src/screens/start_screen/start.dart';
