@@ -1,38 +1,22 @@
 import 'package:flutter/material.dart';
 import 'export.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class StartScreen extends StatefulWidget {
+  const StartScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
-    );
-  }
+  State<StartScreen> createState() => _StartScreenState();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _StartScreenState extends State<StartScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _screens = <Widget>[
-    Home(),
-    Search(),
-    Basket(),
-    Account(),
-    Settings(),
+    HomeScreen(),
+    SearchScreen(),
+    BasketScreen(),
+    AccountScreen(),
+    SettingsScreen(),
   ];
 
   void _onItemTapped(int index) {
