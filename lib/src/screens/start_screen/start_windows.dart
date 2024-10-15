@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'export.dart';
+import 'export_windows.dart';
 
-class StartScreen extends StatefulWidget {
-  const StartScreen({super.key});
+class WindowsStartScreen extends StatefulWidget {
+  const WindowsStartScreen({super.key});
 
   @override
-  State<StartScreen> createState() => _StartScreenState();
+  State<WindowsStartScreen> createState() => WindowsStartScreenState();
 }
 
-class _StartScreenState extends State<StartScreen> {
+class WindowsStartScreenState extends State<WindowsStartScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _screens = <Widget>[
